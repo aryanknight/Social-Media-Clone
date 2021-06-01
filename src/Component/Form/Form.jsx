@@ -1,9 +1,8 @@
 import React,{useState,useEffect} from 'react';
-import {Grid,Typography,Container,Button,TextField,Paper,CircularProgress} from '@material-ui/core';
+import {Typography,Button,TextField,Paper,CircularProgress} from '@material-ui/core';
 import FileBase64 from 'react-file-base64';
 import { useSelector, useDispatch } from "react-redux";
-import {getPosts,createPost,updatePost,deleteId} from '../../Actions/postActions';
-import AddIcon from '@material-ui/icons/Add';
+import {createPost,updatePost,deleteId} from '../../Actions/postActions';
 import {createPosts,updatePosts }from '../../API/api';
 import {useHistory} from 'react-router-dom';
 import './Form.css';
@@ -23,11 +22,7 @@ export default function Form() {
         if(editPostId){
             setButtonTitle('UPDATE');
             setTitle('Editing');
-            const a=posts.find((post)=>{
-                if(post._id===editPostId){
-                    return post
-                }
-            });
+            const a=posts.find((post)=>post._id===editPostId);
             setPostData(a);
         }
     },[editPostId]);
