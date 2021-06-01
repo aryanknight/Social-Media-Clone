@@ -1,0 +1,27 @@
+img{
+    width: 40%;;
+}
+
+#avtar{
+text-align: center;
+margin:1rem 0;
+}
+
+#form{
+    width:35%;
+    min-width: 15rem;
+    margin-top: 10rem;
+    border-radius: 10px;
+    font-family: "Baloo Tamma 2";
+    background: rgba(255, 255, 255, 0.408);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding:2rem;
+}
+
+#title{
+    color:rgb(0, 0, 0);
+    font-family: 'Staatliches';
+}

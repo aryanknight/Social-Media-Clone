@@ -1,0 +1,24 @@
+.font{
+    font-family: 'Baloo Tamma 2';
+}
+
+.font_1{
+    font-family: 'Montserrat';   
+}
+
+.edit-icon{
+    color:black;
+}
+
+.card-icons{
+    color:rgb(238, 72, 54);
+}
+
+.margin{
+    margin-top: 0.3rem;
+}
+
+.like-count{
+    margin-left: 5px;
+    color:rgb(252, 74, 50);
+}
