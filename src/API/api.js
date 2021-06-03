@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-//const URL ='https://immense-dusk-88921.herokuapp.com/posts';
-const URL ='http://localhost:8080/posts';
+const URL ='https://immense-dusk-88921.herokuapp.com/posts';
+//const URL ='http://localhost:8080/posts';
 
 export const createPosts= (postData)=>{
     return axios.post(URL,postData);
