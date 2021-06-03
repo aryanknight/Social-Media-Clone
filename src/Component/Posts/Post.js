@@ -29,7 +29,7 @@ export default function Post({post}) {
       };
       
       const deleting = async () => {
-        const msg = await deletePosts(post._id);
+        const msg = await deletePosts(post._id,post.public_id);
         dispatch(deletePost(post._id));
       };
 
@@ -53,7 +53,7 @@ export default function Post({post}) {
                     <CardContent>
                         <h2 className='font '>{post.title}</h2>
                         <h3 className='font_1 margin'>{post.caption}</h3>
-                        <h3 className='margin font_1'>{post.tags}</h3>
+                        <h3 className='margin font_1 tags'><i>{post.tags}</i></h3>
                     </CardContent>
 
                     <CardActions>

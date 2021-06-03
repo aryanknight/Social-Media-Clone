@@ -10,7 +10,7 @@ import './Form.css';
 export default function Form() {
 
     const history = useHistory();
-    const [postData,setPostData]=useState({creator:'',title:'',caption:'',tags:'', selectedFile:''});
+    const [postData,setPostData]=useState({creator:'',title:'',caption:'',tags:[], selectedFile:''});
     const dispatch = useDispatch();
     const posts=useSelector((state)=>state.postReducer);
     const editPostId=useSelector((state)=>state.postEdit);
@@ -41,7 +41,10 @@ export default function Form() {
             setProgress(true);
             const {data}=await createPosts(postData);
             const newPostId=data._id;
-            setPostData({...postData,_id:newPostId});
+            let Tags=postData.tags.split(' ');
+            Tags=Tags.map(tag => ('#'+tag+' '));
+            console.log(Tags);
+            setPostData({...postData,_id:newPostId,tags:Tags});
             dispatch(createPost(postData));
             setProgress(false);
         }   
