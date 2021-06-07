@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const URL ='https://immense-dusk-88921.herokuapp.com/posts';
+//add your server URL here
+
+const URL = process.env.URL;
+
 //const URL ='http://localhost:8080/posts';
 
 export const createPosts= (postData)=>{
